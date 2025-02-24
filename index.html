@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emily Meng - Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            width: 100%;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .left-column, .right-column {
+            flex: 1;
+            padding: 10px;
+        }
+        .left-column {
+            max-width: 30%;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+        .right-column {
+            max-width: 65%;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .image-placeholder {
+            width: 100%;
+            height: 150px;
+            background: #e4e4e4;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Emily Meng</h1>
+        <div class="contact-info">
+            <a href="mailto:xmeng05@uw.edu">xmeng05@uw.edu</a> |
+            <a href="mailto:xm050323@gmail.com">xm050323@gmail.com</a> |
+            <a href="tel:2064466997">(206) 446-6997</a> |
+            <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <!-- Clubs Section -->
+            <section class="section">
+                <h2>Clubs</h2>
+                <p><strong>UWROV (Underwater Robotics)</strong></p>
+                <ul>
+                    <li>Co-developed a user interaction website to control a float.</li>
+                    <li>Integrated motor control and sensor monitoring.</li>
+                </ul>
+                <div class="image-placeholder">Clubs Picture</div>
+            </section>
+
+            <!-- Research Section -->
+            <section class="section">
+                <h2>Research</h2>
+                <p><strong>WEIRD Lab</strong></p>
+                <ul>
+                    <li>Enhanced sampling methods for algorithmic performance.</li>
+                    <li>Explored computer vision techniques with DISPO framework.</li>
+                </ul>
+                <div class="image-placeholder">Research Picture</div>
+            </section>
+
+            <!-- Hobbies Section -->
+            <section class="section">
+                <h2>Hobbies</h2>
+                <ul>
+                    <li>Game Design</li>
+                    <li>Watching Soccer</li>
+                    <li>Baking & Cooking</li>
+                    <li>Scuba Diving</li>
+                </ul>
+                <div class="image-placeholder">Hobbies Picture</div>
+            </section>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <!-- Education Section -->
+            <section class="section">
+                <h2>Education</h2>
+                <p><strong>University of Washington</strong></p>
+                <p>B.S. Computer Science & B.A. Psychology (Expected June 2024)</p>
+                <ul>
+                    <li>Cumulative GPA: 3.82/4.0</li>
+                    <li>Dean’s List: 5 Academic Quarters</li>
+                </ul>
+                <div class="image-placeholder">Education Picture</div>
+            </section>
+
+            <!-- Work Experience Section -->
+            <section class="section">
+                <h2>Work Experience</h2>
+                <p><strong>Test Daily (Beijing, China)</strong> - Online SAT Teacher (Oct 2021 - Current)</p>
+                <ul>
+                    <li>Taught over 30 students and 12 mid-size classes.</li>
+                    <li>Developed customized strategies for SAT and TOEFL preparation.</li>
+                    <li>Significant score improvements in Math and Reading.</li>
+                </ul>
+                <div class="image-placeholder">Work Experience Picture</div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="section">
+                <h2>Skills</h2>
+                <ul>
+                    <li><strong>Languages:</strong> Python, MATLAB, Java, R, C</li>
+                    <li><strong>Technologies:</strong> Machine Learning, UI/UX, Computer Vision</li>
+                    <li><strong>Languages:</strong> Mandarin (Native), English (Fluent), Spanish (Intermediate)</li>
+                </ul>
+                <div class="image-placeholder">Skills Picture</div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
