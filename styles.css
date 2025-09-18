@@ -112,3 +112,34 @@ header{
   margin: 0;
 }
 .subtitle{ color: var(--muted); margin-top: 10px; }
+.lab {
+  margin: 40px 0;
+  padding: 20px;
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.lab-title {
+  font-size: 2rem;
+  margin: 0 0 6px;
+}
+
+.lab-title a {
+  text-decoration: none;
+  color: var(--brand);
+}
+
+.lab-title a:hover {
+  text-decoration: underline;
+}
+
+.lab-subtitle {
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+.lab ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
