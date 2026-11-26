@@ -33,16 +33,8 @@
     .hero-text > p:not(.lead) { max-width: 540px; color: #516276; }
     .pill { display: inline-block; border: 1px solid #caa59d; border-radius: 30px; padding: 10px 19px; text-decoration: none; margin: 10px 10px 0 0; font-size: 14px; }
     .pill:hover { background: #f5dcd2; }
-    .hero-art { position: relative; display: grid; align-items: center; justify-items: center; padding: 55px 25px; background: radial-gradient(circle at 65% 45%,#fffaf6 0%,#e6c9cc 60%,#c5d6e6 100%); }
-    .sun { position:absolute; width:230px; height:230px; background:#fff3d7; border-radius:50%; top:13%; right:8%; filter:blur(2px); opacity:.8; }
-    .phone { position: relative; z-index:1; width:245px; max-width:100%; border: 9px solid #31465d; border-radius: 34px; padding: 28px 15px; background: #fffdf9; box-shadow: 18px 22px 0 rgba(49,70,93,.1); transform: rotate(5deg); font-size: 13px; }
-    .phone-top { text-align:center; color:#8492a0; font-size:11px; margin-bottom:18px; }
-    .clock { text-align:center; font-size:47px; line-height:1.2; color:#b86468; letter-spacing:-.05em; }
-    .phone-title { text-align:center; font-size:20px; font-weight:600; }
-    .member { border:1px solid #ecd2c8; background:#fff5ee; margin-top:10px; padding:8px 11px; border-radius:12px; }
-    .member span { float:right; color:#7e9b87; }
-    .phone-note { margin-top:18px; background:#dfe9f0; padding:11px; text-align:center; border-radius:12px; }
-    .figure-note { position:absolute; bottom:20px; font-size:11px; letter-spacing:.05em; color:#536779; }
+    .hero-art { display: flex; align-items: center; justify-content: center; padding: clamp(20px,3vw,42px); background: linear-gradient(145deg,#f4e3df,#d5e1ed); }
+    .real-screens { width: 100%; max-width: 430px; height: auto; display: block; border-radius: 14px; }
     .poster-showcase { margin: 45px 0 0; padding: 20px; border-radius: 20px; background: #e7eef4; border: 1px solid #cfdae4; }
     .poster-showcase img { display: block; width: 100%; max-width: 850px; height: auto; margin: 0 auto; border-radius: 12px; }
     .poster-showcase figcaption { text-align: center; font-size: 13px; color: var(--muted); padding-top: 12px; }
@@ -91,17 +83,8 @@
           <a class="pill" href="https://github.com/EmilyMeng05/circle_up" target="_blank" rel="noopener noreferrer">View the code ↗</a>
         </div>
         <div class="hero-art">
-          <div class="sun" aria-hidden="true"></div>
-          <div class="phone" aria-label="Conceptual illustration of a shared wake-up circle">
-            <div class="phone-top">CIRCLE UP · MORNING CREW</div>
-            <div class="clock">7:00</div>
-            <div class="phone-title">Good morning!</div>
-            <div class="member">You <span>✓</span></div>
-            <div class="member">Friend 1 <span>✓</span></div>
-            <div class="member">Friend 2 <span>○</span></div>
-            <div class="phone-note">Share your morning photo ☀</div>
-          </div>
-          <div class="figure-note">Illustrative concept · not an app screenshot</div>
+          <img class="real-screens" src="../circle-up-real-screens.webp"
+               alt="Four Circle Up app screenshots from the original project poster: login, setting an alarm, circle details, and photo confirmation">
         </div>
       </section>
       <figure class="poster-showcase">
