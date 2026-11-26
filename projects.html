@@ -72,6 +72,17 @@
       border-top:1px solid #c3d3df;
       padding:35px 0
       }
+      .item-compact {
+      grid-template-columns:minmax(0,1fr) auto;
+      align-items:center;
+      gap:24px;
+      }
+      .item-compact h2 {
+      margin:10px 0 0;
+      }
+      .item-compact .story {
+      white-space:nowrap;
+      }
       .item small {
       font-size:12px;
       letter-spacing:.08em;
@@ -104,6 +115,13 @@
       grid-template-columns:1fr;
       gap:5px
       }
+      .item-compact {
+      grid-template-columns:1fr;
+      gap:16px;
+      }
+      .item-compact .story {
+      justify-self:start;
+      }
       header {
       padding-bottom:42px
       }
@@ -119,14 +137,12 @@
         </h1>
         <p class="intro">A collection of class projects where I turned ideas into something I could build, investigate, and learn from.
         </p>
-        <article class="item"><small>01 / CSE 340</small>
+        <article class="item item-compact">
           <div>
-            <h2>Circle Up
-            </h2>
-            <p>What if waking up was something friends could do together? We built a group alarm companion with shared wake-up times, photo check-ins, and social accountability. Our project received a System Usability Scale (SUS) score of 80.
-            </p>
-            <a class="story" href="projects/circle-up.html">Project story →</a>
+            <small>01 / CSE 340</small>
+            <h2>Circle Up</h2>
           </div>
+          <a class="story" href="projects/circle-up.html">Project story →</a>
         </article>
         <article class="item"><small>02 / Statistics</small>
           <div>
