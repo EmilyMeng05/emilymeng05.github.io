@@ -59,6 +59,33 @@
       line-height:1.25;
       margin:10px 0
       }
+      .projects-hero {
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      min-height:490px;
+      border-radius:22px;
+      overflow:hidden;
+      margin-bottom:68px;
+      background:#e7eeeb;
+      }
+      .projects-hero-copy {
+      padding:clamp(30px,5vw,62px);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      background:linear-gradient(128deg,#f0f4f0,#e2ebea);
+      }
+      .projects-hero-copy .eyebrow {color:#527d77;}
+      .projects-hero h1 {margin:18px 0 20px;color:#20443e;}
+      .projects-hero .intro {margin:0;max-width:410px;color:#506f6c;font-size:18px;}
+      .projects-hero-photo {
+      min-height:490px;
+      overflow:hidden;
+      background:#ccd9d5;
+      }
+      .projects-hero-photo img {
+      display:block;width:100%;height:100%;object-fit:cover;object-position:52% 49%;
+      }
       .intro {
       font-size:19px;
       color:#526780;
@@ -111,6 +138,10 @@
       font-size:14px
       }
       @media(max-width:650px) {
+      .projects-hero {grid-template-columns:1fr;min-height:0;margin-bottom:40px;}
+      .projects-hero-copy {padding:35px 28px;}
+      .projects-hero-photo {min-height:340px;height:340px;}
+      .projects-hero-photo img {object-position:50% 46%;}
       .item {
       grid-template-columns:1fr;
       gap:5px
@@ -133,10 +164,16 @@
       <header><a href="index.html">Emily (Xia) Meng</a><a class="back" href="index.html">← Home</a>
       </header>
       <main>
-        <h1>Projects.
-        </h1>
-        <p class="intro">A collection of class projects where I turned ideas into something I could build, investigate, and learn from.
-        </p>
+        <section class="projects-hero" aria-labelledby="projects-title">
+          <div class="projects-hero-copy">
+            <span class="eyebrow">Ideas / Experiments / Things I've built</span>
+            <h1 id="projects-title">Projects.</h1>
+            <p class="intro">A collection of class projects where I turned ideas into something I could build, investigate, and learn from.</p>
+          </div>
+          <div class="projects-hero-photo">
+            <img src="projects-seagull.jpg" alt="A seagull resting beside the water, with sunlight reflecting across the surface">
+          </div>
+        </section>
         <article class="item item-compact">
           <div>
             <small>01 / CSE 340</small>
