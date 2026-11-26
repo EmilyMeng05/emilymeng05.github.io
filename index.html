@@ -153,12 +153,79 @@
       max-width:800px
       }
       }
+
+      .site-top {
+        display:flex;
+        justify-content:space-between;
+        align-items:flex-start;
+        gap:24px;
+        padding:clamp(22px,4vw,52px) clamp(22px,5vw,65px);
+        position:relative;
+        z-index:5
+      }
+      .site-top .signature { padding:0 }
+      .contact { position:relative; flex-shrink:0 }
+      .contact-toggle {
+        border:1px solid rgba(255,255,255,.67);
+        border-radius:999px;
+        background:rgba(41,26,58,.18);
+        color:#fff;
+        padding:10px 18px;
+        font:16px Arial,Helvetica,sans-serif;
+        cursor:pointer;
+        backdrop-filter:blur(7px);
+        transition:background .2s
+      }
+      .contact-toggle:hover,.contact-toggle:focus-visible { background:rgba(255,255,255,.2) }
+      .contact-card {
+        position:absolute;
+        right:0;
+        top:calc(100% + 14px);
+        width:min(335px,calc(100vw - 42px));
+        border:1px solid rgba(255,255,255,.64);
+        border-radius:18px;
+        padding:24px;
+        background:rgba(255,250,252,.97);
+        color:#443349;
+        box-shadow:0 18px 48px rgba(27,14,34,.22);
+        backdrop-filter:blur(18px);
+        text-align:left
+      }
+      .contact-card[hidden] { display:none }
+      .contact-card h2 { margin:0 0 9px; font-size:23px; font-weight:500; letter-spacing:-.03em }
+      .contact-card p { margin:0 0 17px; font-size:14px; line-height:1.6; color:#66546a }
+      .email-line { display:flex; align-items:center; justify-content:space-between; gap:10px; border-top:1px solid #e9dfe9; padding-top:14px }
+      .email-line a { font-size:14px; color:#533f65; overflow-wrap:anywhere }
+      .copy-btn { flex-shrink:0; border:1px solid #d9c8df; border-radius:999px; padding:7px 11px; font-size:12px; background:white; color:#533f65; cursor:pointer }
+      .mail-link { display:block; margin-top:17px; background:#584268; color:white; border-radius:999px; text-align:center; padding:10px 16px; font-size:14px; text-decoration:none }
+      .mail-link:hover { background:#725480 }
+      .cv-link { display:inline-block; margin-top:9px; color:white; font-size:16px; text-decoration:none; border-bottom:1px solid rgba(255,255,255,.75); padding-bottom:4px; text-shadow:0 2px 12px rgba(25,10,30,.3) }
+      .cv-link:hover,.cv-link:focus-visible { border-bottom-color:white; }
+      @media(max-width:650px) {
+        .site-top { gap:10px; align-items:center }
+        .contact-toggle { padding:9px 12px; font-size:13px }
+        .site-top .signature { font-size:20px }
+        .contact-card { top:calc(100% + 11px); }
+      }
     </style>
   </head>
   <body>
     <main class="hero">
-      <div class="signature">Emily (Xia) Meng <span aria-hidden="true">✧</span>
-      </div>
+      <header class="site-top">
+        <div class="signature">Emily (Xia) Meng <span aria-hidden="true">✧</span></div>
+        <div class="contact">
+          <button class="contact-toggle" id="contact-toggle" type="button" aria-expanded="false" aria-controls="contact-card">Say hello ↗</button>
+          <div class="contact-card" id="contact-card" hidden>
+            <h2>Say hello! ✧</h2>
+            <p>Always happy to chat about research, teaching, or interesting ideas. Feel free to reach out!</p>
+            <div class="email-line">
+              <a href="mailto:xmeng05@uw.edu">xmeng05@uw.edu</a>
+              <button class="copy-btn" id="copy-email" type="button" aria-label="Copy email address">Copy</button>
+            </div>
+            <a class="mail-link" href="mailto:xmeng05@uw.edu">Send an email ↗</a>
+          </div>
+        </div>
+      </header>
       <section class="hero-main">
         <h1>Hi, I'm Emily!
         </h1>
@@ -170,7 +237,44 @@
         </p>
         <nav class="quicklinks" aria-label="Explore my work"><a href="research.html">Research ↗</a><a href="projects.html">Projects ↗</a><a href="teaching.html">Teaching ↗</a><a href="publications.html">Publications ↗</a>
         </nav>
+        <a class="cv-link" href="Xia_Meng_Academic_CV.pdf" target="_blank" rel="noopener noreferrer">View my CV ↗</a>
       </section>
     </main>
+
+    <script>
+      (function () {
+        const toggle = document.getElementById('contact-toggle');
+        const card = document.getElementById('contact-card');
+        const copy = document.getElementById('copy-email');
+        function closeCard() { card.hidden = true; toggle.setAttribute('aria-expanded', 'false'); }
+        toggle.addEventListener('click', function () {
+          const open = card.hidden;
+          card.hidden = !open;
+          toggle.setAttribute('aria-expanded', String(open));
+        });
+        document.addEventListener('click', function (event) {
+          if (!event.target.closest('.contact')) closeCard();
+        });
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape' && !card.hidden) { closeCard(); toggle.focus(); }
+        });
+        copy.addEventListener('click', async function () {
+          try {
+            await navigator.clipboard.writeText('xmeng05@uw.edu');
+            copy.textContent = 'Copied!';
+            setTimeout(function () { copy.textContent = 'Copy'; }, 1700);
+          } catch (error) {
+            const input = document.createElement('textarea');
+            input.value = 'xmeng05@uw.edu';
+            document.body.appendChild(input);
+            input.select();
+            const ok = document.execCommand('copy');
+            input.remove();
+            copy.textContent = ok ? 'Copied!' : 'Select email';
+            setTimeout(function () { copy.textContent = 'Copy'; }, 1700);
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
