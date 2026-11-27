@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>STAT 451 · Threatened Species — Emily Meng
+    </title>
+    <style>
+      * {
+      box-sizing:border-box
+      }
+      body {
+      margin:0;
+      background:#fcfaf5;
+      color:#244052;
+      font:17px/1.65 Arial,Helvetica,sans-serif
+      }
+      a {
+      color:inherit;
+      text-underline-offset:4px
+      }
+      a:focus-visible {
+      outline:2px solid #50769b;
+      outline-offset:4px
+      }
+      .wrap {
+      max-width:1060px;
+      margin:auto;
+      padding:30px clamp(22px,6vw,70px)
+      }
+      header {
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      align-items:center;
+      padding-bottom:70px
+      }
+      header a {
+      text-decoration:none
+      }
+      .back {
+      font-size:14px;
+      color:#59738e
+      }
+      .eyebrow {
+      font-size:12px;
+      letter-spacing:.16em;
+      color:#a45475;
+      text-transform:uppercase
+      }
+      h1 {
+      font-size:clamp(50px,8vw,86px);
+      font-weight:400;
+      line-height:1.1;
+      letter-spacing:-.055em;
+      margin:20px 0
+      }
+      h2 {
+      font-size:clamp(27px,3vw,39px);
+      font-weight:400;
+      line-height:1.25;
+      margin:10px 0
+      }
+      .intro {
+      font-size:19px;
+      color:#526780;
+      max-width:710px;
+      margin-bottom:65px
+      }
+      .item {
+      display:grid;
+      grid-template-columns:135px minmax(0,1fr);
+      gap:24px;
+      border-top:1px solid #d9d0d7;
+      padding:42px 0
+      }
+      .item small {
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#6986a0
+      }
+      .item p {
+      color:#496076;
+      max-width:670px
+      }
+      .story {
+      display:inline-block;
+      border:1px solid #b787a7;
+      border-radius:30px;
+      padding:9px 17px;
+      text-decoration:none;
+      font-size:14px
+      }
+      .story:hover {
+      background:#f4e4ee
+      }
+      .viz-section { border-top:1px solid #d8d3d4; padding:58px 0 64px; }
+      .viz-section h2 { font-size:clamp(32px,4vw,51px); margin:8px 0 14px; }
+      .viz-section > p { color:#496076; max-width:760px; }
+      .viz-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; margin-top:26px; }
+      .viz-card { margin:0; border:1px solid #c4d9d4; border-radius:20px; background:#dff0eb; padding:18px; min-width:0; transition:transform .2s ease,box-shadow .2s ease; }
+      .viz-card.featured { grid-column:1/-1; background:#e4eef9; border-color:#b6cfe5; }
+      .viz-card a { display:block; background:#fff; border-radius:12px; overflow:hidden; }
+      .viz-card img { display:block; width:100%; height:260px; object-fit:contain; }
+      .viz-card.featured img { height:auto; max-height:460px; }
+      .viz-card figcaption { padding:15px 3px 3px; color:#3e5a6d; font-size:14px; line-height:1.6; }
+      .viz-card strong { display:block; font-size:17px; color:#244052; margin-bottom:5px; }
+      .viz-tip {font-size:13px;color:#6986a0;margin-top:15px;}
+      @media(max-width:650px) { .viz-grid {grid-template-columns:1fr;} .viz-card.featured {grid-column:auto;} .viz-card img {height:auto;max-height:330px;} }
+      .hero-stat {padding:clamp(30px,5vw,56px); border-radius:22px; margin-bottom:40px; background:linear-gradient(112deg,#f7e3df 0%,#f9eae6 40%,#e6eef8 100%); position:relative; overflow:hidden;}
+      .hero-stat::after { content:"";position:absolute;right:-65px;top:-65px;width:270px;height:270px;border-radius:50%;border:38px solid rgba(133,186,171,.28);pointer-events:none; }
+      .hero-stat h1 {color:#263e56; position:relative;z-index:1;}
+      .hero-stat .intro {color:#665872; margin-bottom:4px;position:relative;z-index:1;}
+      .hero-stat .eyebrow {color:#a45475;}
+      .item:nth-of-type(1) small {color:#a45475;}
+      .item:nth-of-type(2) small {color:#267d76;}
+      .viz-section .eyebrow {color:#287c81;}
+      .viz-card:nth-child(2) {background:#fbe9db;border-color:#ebccb5;}
+      .viz-card:nth-child(3) {background:#eae6f7;border-color:#ccc4e8;}
+      .viz-card:nth-child(4) {background:#e2eee4;border-color:#c2d9c7;}
+      .viz-card:nth-child(5) {background:#f8e6eb;border-color:#e9c9d6;}
+      .viz-card:hover {transform:translateY(-3px);box-shadow:0 10px 26px rgba(45,69,77,.09);}
+      .viz-card a:focus-visible {outline-offset:2px;}
+      @media (prefers-reduced-motion:reduce){.viz-card {transition:none;} .viz-card:hover {transform:none;}}
+      footer {
+      border-top:1px solid #c3d3df;
+      padding-top:26px;
+      margin-top:75px;
+      font-size:14px
+      }
+      @media(max-width:650px) {
+      .item {
+      grid-template-columns:1fr;
+      gap:5px
+      }
+      header {
+      padding-bottom:42px
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header><a href="../index.html">Emily (Xia) Meng</a><a class="back" href="../projects.html">← Projects</a>
+      </header>
+      <main>
+        <section class="hero-stat">
+          <span class="eyebrow">STAT 451 / Group data visualization project</span>
+          <h1>Threatened Species.</h1>
+          <p class="intro">How has the number of threatened species changed over time, and what can we learn from differences across countries and species groups?</p>
+        </section>
+        <article class="item">
+          <small>The question</small>
+          <div>
+            <h2>Understanding patterns in biodiversity.</h2>
+            <p>Our group explored the United Nations threatened-species dataset because we wanted to better understand the scale and geography of biodiversity threats. We looked at vertebrates, invertebrates, plants, and overall totals across countries and years.</p>
+          </div>
+        </article>
+        <article class="item">
+          <small>The analysis</small>
+          <div>
+            <h2>Looking beyond one chart.</h2>
+            <p>We built a series of visualizations to examine changes over time, compare countries with high numbers of threatened species, and explore which countries stood out within different species groups. Using line charts and bar charts helped us move between a global view and more detailed geographic comparisons.</p>
+            <p>We also considered which years showed the most extreme values. These visualizations offered a starting point for asking more specific environmental questions, while reminding us that descriptive trends alone cannot establish their causes.</p>
+          </div>
+        </article>
+        <section class="viz-section" aria-labelledby="charts-title">
+          <span class="eyebrow">Visual exploration / Original project figures</span>
+          <h2 id="charts-title">Seeing the patterns.</h2>
+          <p>We explored the UN threatened-species data from several perspectives, moving from changes over time to comparisons across countries and species groups.</p>
+          <div class="viz-grid">
+          <figure class="viz-card featured">
+            <a href="https://raw.githubusercontent.com/EmilyMeng05/Stat451-group-project/main/bygroup_byyear_species.png" target="_blank" rel="noopener noreferrer" aria-label="Open full image: How do threatened-species counts change over time?"><img src="https://raw.githubusercontent.com/EmilyMeng05/Stat451-group-project/main/bygroup_byyear_species.png" loading="lazy" alt="How do threatened-species counts change over time?"></a>
+            <figcaption><strong>How do threatened-species counts change over time?</strong>Compare the recorded counts for vertebrates, invertebrates, plants, and the overall total across the years in the dataset.</figcaption>
+          </figure>
+          <figure class="viz-card">
+            <a href="https://raw.githubusercontent.com/EmilyMeng05/Stat451-group-project/main/Top%205%20Countries_highest%20total%20amount.png" target="_blank" rel="noopener noreferrer" aria-label="Open full image: Which countries have the highest totals?"><img src="https://raw.githubusercontent.com/EmilyMeng05/Stat451-group-project/main/Top%205%20Countries_highest%20total%20amount.png" loading="lazy" alt="Which countries have the highest totals?"></a>
+            <figcaption><strong>Which countries have the highest totals?</strong>A ranked bar chart compares the five countries with the largest reported totals.</figcaption>
+          </figure>
+          <figure class="viz-card">
+            <a href="https://raw.githubusercontent.com/EmilyMeng05/Stat451-group-project/main/Top%205%20country%20trend%20graph.png" target="_blank" rel="noopener noreferrer" aria-label="Open full image: Do the same countries follow the same trend?"><img src="https://raw.githubusercontent.com/EmilyMeng05/Stat451-group-project/main/Top%205%20country%20trend%20graph.png" loading="lazy" alt="Do the same countries follow the same trend?"></a>
+            <figcaption><strong>Do the same countries follow the same trend?</strong>A time-series comparison of the top five countries, showing how the reported counts evolve.</figcaption>
+          </figure>
+          <figure class="viz-card">
+            <a href="https://raw.githubusercontent.com/EmilyMeng05/Stat451-group-project/main/highest_lost_of_life.png" target="_blank" rel="noopener noreferrer" aria-label="Open full image: How does the picture change across species groups?"><img src="https://raw.githubusercontent.com/EmilyMeng05/Stat451-group-project/main/highest_lost_of_life.png" loading="lazy" alt="How does the picture change across species groups?"></a>
+            <figcaption><strong>How does the picture change across species groups?</strong>Compare leading countries separately for vertebrates, invertebrates, plants, and overall totals.</figcaption>
+          </figure>
+          <figure class="viz-card">
+            <a href="https://raw.githubusercontent.com/EmilyMeng05/Stat451-group-project/main/ThreatenedSpeciesWorld.png" target="_blank" rel="noopener noreferrer" aria-label="Open full image: What can we learn from a wider view?"><img src="https://raw.githubusercontent.com/EmilyMeng05/Stat451-group-project/main/ThreatenedSpeciesWorld.png" loading="lazy" alt="What can we learn from a wider view?"></a>
+            <figcaption><strong>What can we learn from a wider view?</strong>An additional visualization from our project repository.</figcaption>
+          </figure>
+          </div>
+          <p class="viz-tip">Click any figure to view the full-size original from our GitHub repository. Figures load from the project repository.</p>
+        </section>
+        <article class="item">
+          <small>Explore the work</small>
+          <div>
+            <h2>Data, code &amp; visualizations.</h2>
+            <p>The original group repository includes our research questions, notes on each chart, and project files.</p>
+            <a class="story" href="https://github.com/EmilyMeng05/Stat451-group-project" target="_blank" rel="noopener noreferrer">Code &amp; visualizations ↗</a>
+          </div>
+        </article>
+      </main>
+      <footer><a href="../projects.html">← Back to Projects</a>
+      </footer>
+    </div>
+  </body>
+</html>

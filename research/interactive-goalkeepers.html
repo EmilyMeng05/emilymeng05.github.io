@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Protection & distribution — UW PRIME Soccer Analytics by Emily (Xia) Meng">
+  <title>Goalkeeper Styles | Emily (Xia) Meng</title>
+  <style>
+    :root { --ink:#213f35; --green:#366f56; --paper:#faf9f3; --line:#d5e2d8; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.6 Arial,Helvetica,sans-serif; }
+    a { color:inherit; text-underline-offset:3px; }
+    .page { max-width:1500px; margin:0 auto; padding:0 clamp(16px,4vw,64px) 42px; }
+    header { padding:24px 0; display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+    header a { text-decoration:none; }
+    .tag { color:var(--green); text-transform:uppercase; font-size:12px; font-weight:bold; letter-spacing:.14em; }
+    h1 { font-size:clamp(36px,5vw,68px); font-weight:400; letter-spacing:-.045em; margin:12px 0 10px; }
+    p { color:#4d6b5e; max-width:900px; }
+    .toolbar { display:flex; gap:12px; flex-wrap:wrap; padding:15px 0 22px; }
+    .button { border:1px solid #a6c4b0; border-radius:99px; padding:9px 18px; text-decoration:none; font-size:14px; background:#ecf3ec; }
+    .frame { width:100%; height: min(85vh,920px); min-height:560px; border:1px solid var(--line); border-radius:14px; background:white; }
+    .notice { font-size:13px; margin-top:14px; }
+    @media(max-width:700px){ .frame { min-height:650px; height:75vh; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a href="../index.html">Emily (Xia) Meng</a>
+      <a href="mathematics.html#understand-roles">← Back to Mathematics</a>
+    </header>
+    <main>
+      <span class="tag">UW PRIME / Interactive visualization</span>
+      <h1>Goalkeeper Styles</h1>
+      <p>Goalkeepers are often compared by their overall ratings, but they can contribute to a team in very different ways. Some stand out for shot-stopping and protecting the goal, while others offer more through passing and distribution. I used principal component analysis (PCA) to explore these differences and visualize goalkeeper styles along two broad dimensions: protection and distribution. The interactive map lets you explore where individual goalkeepers fall and how their strengths might fit different teams. Hover over a point to learn more about a goalkeeper's profile.</p>
+      <nav class="toolbar" aria-label="Visualization options">
+        <a class="button" href="mathematics.html#understand-roles">Back to project story →</a>
+      </nav>
+      <iframe class="frame" title="Protection & distribution" src="https://raw.githack.com/EmilyMeng05/Soccer_analytics-UW_PRIME-Su-26-/main/results/stage_3_7/interactive_goalkeeper_pca_map.html" loading="lazy" referrerpolicy="no-referrer" allowfullscreen></iframe>
+    </main>
+  </div>
+</body>
+</html>

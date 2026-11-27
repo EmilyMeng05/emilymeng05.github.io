@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Research publications by Emily Xia Meng, including Small Mathematical Worlds and PatternMiner.">
+    <title>Publications — Emily (Xia) Meng
+    </title>
+    <style>
+      :root {
+      --ink:#203e5d;
+      --muted:#657586;
+      --paper:#fbf8f2;
+      --accent:#50769b;
+      --rule:#cbd5de
+      }
+      * {
+      box-sizing:border-box
+      }
+      html {
+      scroll-behavior:smooth
+      }
+      body {
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      font-family:Arial,Helvetica,sans-serif;
+      line-height:1.65
+      }
+      a {
+      color:inherit;
+      text-underline-offset:4px
+      }
+      a:focus-visible {
+      outline:2px solid #50769b;
+      outline-offset:4px
+      }
+      .shell {
+      max-width:1180px;
+      margin:auto;
+      padding:0 clamp(24px,6vw,80px)
+      }
+      .top {
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      align-items:center;
+      padding-top:28px
+      }
+      .brand {
+      font-size:19px;
+      text-decoration:none
+      }
+      .back {
+      color:var(--muted);
+      font-size:13px;
+      text-decoration:none
+      }
+      .hero {
+      position:relative;
+      padding:104px 0 82px;
+      border-bottom:1px solid var(--rule);
+      overflow:hidden
+      }
+      .label {
+      font-size:11px;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      color:var(--accent);
+      font-weight:600
+      }
+      .hero h1 {
+      font-size:clamp(54px,8.5vw,116px);
+      font-weight:400;
+      line-height:1.03;
+      letter-spacing:-.06em;
+      margin:20px 0 25px
+      }
+      .hero p {
+      font-size:clamp(16px,1.7vw,21px);
+      max-width:590px;
+      color:#506477;
+      margin:0
+      }
+      .branch-art {
+      position:absolute;
+      right:0;
+      top:75px;
+      width:300px;
+      max-width:34%;
+      pointer-events:none;
+      opacity:.7
+      }
+      .count {
+      font-size:12px;
+      color:var(--muted);
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      margin:34px 0 5px
+      }
+      .paper {
+      display:grid;
+      grid-template-columns:116px minmax(0,1fr);
+      gap:42px;
+      padding:62px 0 72px;
+      border-bottom:1px solid var(--rule)
+      }
+      .paper:last-of-type {
+      border-bottom:0
+      }
+      .paper-number {
+      font-size:12px;
+      color:var(--accent);
+      letter-spacing:.15em
+      }
+      .date {
+      font-size:12px;
+      letter-spacing:.12em;
+      color:var(--muted);
+      text-transform:uppercase;
+      margin:0 0 14px
+      }
+      .paper h2 {
+      font-size:clamp(28px,3.7vw,47px);
+      line-height:1.19;
+      letter-spacing:-.032em;
+      font-weight:400;
+      margin:0 0 19px;
+      max-width:790px
+      }
+      .authors {
+      font-size:15px;
+      color:#41586c;
+      max-width:820px;
+      margin-bottom:20px
+      }
+      .authors strong {
+      font-weight:700;
+      color:var(--ink)
+      }
+      .description {
+      max-width:760px;
+      font-size:17px;
+      color:#3d5264;
+      margin:20px 0 25px
+      }
+      .notice {
+      display:inline-block;
+      background:#ecf1f4;
+      color:#44607d;
+      font-size:12px;
+      padding:7px 11px;
+      border-radius:3px;
+      letter-spacing:.02em
+      }
+      .links {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:26px
+      }
+      .links a {
+      border:1px solid #9fb6c9;
+      border-radius:100px;
+      padding:10px 20px;
+      text-decoration:none;
+      font-size:14px;
+      transition:background .2s,color .2s
+      }
+      .links a:hover {
+      background:var(--ink);
+      color:white
+      }
+      .endnote {
+      padding:18px 0 55px;
+      color:var(--muted);
+      font-size:14px
+      }
+      .endnote a {
+      color:var(--ink)
+      }
+      footer {
+      border-top:1px solid var(--rule);
+      padding:22px 0 40px;
+      display:flex;
+      gap:20px;
+      justify-content:space-between;
+      color:var(--muted);
+      font-size:13px
+      }
+      @media(max-width:750px) {
+      .hero {
+      padding:80px 0 65px
+      }
+      .branch-art {
+      top:8px;
+      opacity:.27;
+      max-width:44%
+      }
+      .paper {
+      grid-template-columns:1fr;
+      gap:10px;
+      padding:46px 0
+      }
+      .paper h2 {
+      font-size:30px
+      }
+      .top {
+      align-items:flex-start
+      }
+      .brand {
+      font-size:16px
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <header class="top"><a class="brand" href="index.html" aria-label="Back to homepage">Emily (Xia) Meng</a><a class="back" href="research.html">← Research</a>
+      </header>
+      <main>
+        <section class="hero">
+          <h1>Publications<span aria-hidden="true">.</span>
+          </h1>
+          <svg class="branch-art" viewBox="0 0 300 360" fill="none" aria-hidden="true"><path d="M240 335 C178 267 190 200 139 135 C109 96 64 67 33 33 M194 248 C230 209 259 177 269 131 M168 183 C108 183 83 165 57 140 M113 105 C146 80 160 56 165 25" stroke="#9aafbd" stroke-width="2"/><g fill="#a9bda2"><ellipse cx="39" cy="38" rx="8" ry="19" transform="rotate(-38 39 38)"/><ellipse cx="61" cy="137" rx="8" ry="20" transform="rotate(-50 61 137)"/><ellipse cx="270" cy="135" rx="8" ry="19" transform="rotate(30 270 135)"/><ellipse cx="164" cy="30" rx="8" ry="20" transform="rotate(35 164 30)"/><ellipse cx="135" cy="90" rx="7" ry="16" transform="rotate(39 135 90)"/></g></svg>
+        </section>
+        <article class="paper">
+          <div class="paper-number">01 / NOV 2026
+          </div>
+          <div>
+            <p class="date">arXiv preprint · Artificial intelligence & combinatorics
+            </p>
+            <h2>PatternMiner: Automated Mathematical Discovery Through LLM-Guided Training and Interpretation of Small Models
+            </h2>
+            <p class="authors">Michael Ruofan Zeng · Junaid Hasan · Xuanyu Yang · <strong>Emily Xia Meng</strong> · Henry Kvinge
+            </p>
+            <p class="description">How can machine learning help us discover mathematics, rather than only predict answers? PatternMiner combines an LLM agent with smaller models and their interpretations to propose mathematical conjectures, test them against counterexamples, and refine them. The paper explores this approach across problems in algebraic combinatorics.
+            </p>
+            <span class="notice">Preprint · Submitted November 25, 2026</span>
+            <div class="links"><a href="https://arxiv.org/abs/2611.33966" target="_blank" rel="noopener noreferrer">Read paper ↗</a><a href="https://arxiv.org/pdf/2611.33966" target="_blank" rel="noopener noreferrer">PDF ↗</a><a href="https://github.com/uw-math-ai/PatternMiner" target="_blank" rel="noopener noreferrer">Code & experiments ↗</a><a href="research/patternminer.html">Project story →</a>
+            </div>
+          </div>
+        </article>
+        <article class="paper">
+          <div class="paper-number">02 / OCT 2026
+          </div>
+          <div>
+            <p class="date">First-author paper · Machine learning
+            </p>
+            <h2>Studying the Effects of Task Diversity Using Small Mathematical Worlds
+            </h2>
+            <p class="authors"><strong>Emily Xia Meng</strong> · Xuanyu Yang · Junaid Hasan · Michael Ruofan Zeng · Henry Kvinge
+            </p>
+            <p class="description">What happens when a model learns several related mathematical tasks instead of just one? We introduce IntWorld and PermWorld, two controlled collections of mathematical tasks that help us study how task variety affects learned representations and generalization. Our initial findings suggest that greater task diversity can enrich a model's internal representations.
+            </p>
+            <span class="notice">NeurIPS 2026 MATH-AI Workshop · Poster</span>
+            <div class="links"><a href="https://arxiv.org/abs/2610.13750" target="_blank" rel="noopener noreferrer">Read paper ↗</a><a href="https://arxiv.org/pdf/2610.13750" target="_blank" rel="noopener noreferrer">PDF ↗</a><a href="https://openreview.net/forum?id=czjdnMqisw" target="_blank" rel="noopener noreferrer">OpenReview ↗</a><a href="research/math-ai.html">Project story →</a>
+            </div>
+          </div>
+        </article>
+      </main>
+      <footer><span>Emily (Xia) Meng</span><a href="index.html">Back to homepage ↑</a>
+      </footer>
+    </div>
+  </body>
+</html>
